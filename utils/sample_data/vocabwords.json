@@ -1,13 +1,92 @@
 {
-  "": {
-    "firebaseKey": "",
-    "uid": "",
-    "title": "",
-    "word": "",
-    "definition": "",
-    "lang_tech": "",
-    "time_submitted": "",
-    "fave": false,
-    "public": true
+  "-NI5CPR8zBY9BCoNifNo": {
+    "firebaseKey": "e67bc10d-b339-4139-a71d-bfeb408952ef",
+    "uid": "e44b1a52-8686-4f2c-ac81-1e2ad236f2f4",
+    "title": "arcu libero rutrum ac",
+    "definition": "Donec posuere metus vitae ipsum. Aliquam non mauris. Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis. Fusce posuere felis sed lacus.",
+    "langTech": "CSS",
+    "timeSubmitted": "2022-09-05 12:24:20",
+    "lang_uid": "112c911deb0c"
+  },
+  "-NI5CPRB0T-D8AFnzfvg": {
+    "firebaseKey": "bac69ce2-f78c-4b5c-acf4-e93e49710e7d",
+    "uid": "d76c0c22-d0f8-4722-bb1a-41d6059d75c0",
+    "title": "odio elementum eu interdum eu",
+    "definition": "Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat. In congue. Etiam justo. Etiam pretium iaculis justo. In hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.",
+    "langTech": ".NET",
+    "timeSubmitted": "2022-03-06 03:29:02",
+    "lang_uid": "null"
+  },
+  "-NI5CPRE9g2KRgKpO_N7": {
+    "firebaseKey": "e4a6a9ee-88af-4fb7-8a3f-52c8886f0d95",
+    "uid": "091d9b95-940f-4c49-b753-7dadf956b1fc",
+    "title": "mauris",
+    "definition": "Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla.",
+    "langTech": "CSS",
+    "timeSubmitted": "2021-12-30 15:54:25",
+    "lang_uid": "null"
+  },
+  "-NI5CPRHqj6V-aV1fQR7": {
+    "firebaseKey": "7520eab9-842d-48a2-b0d1-1750c10c709e",
+    "uid": "cf1812d2-3be5-4eb7-b501-ba8e6665cb0f",
+    "title": "erat eros viverra eget",
+    "definition": "Sed vel enim sit amet nunc viverra dapibus. Nulla suscipit ligula in lacus.",
+    "langTech": "HTML",
+    "timeSubmitted": "2022-08-30 14:24:59",
+    "lang_uid": "null"
+  },
+  "-NI5CPRJtgfYeiiUkVGR": {
+    "firebaseKey": "9bad5508-2e5e-4c6b-9658-6e5a0adbd498",
+    "uid": "98dddc07-f187-4606-ad5c-3863cae3fa46",
+    "title": "elementum eu interdum eu tincidunt",
+    "definition": "Nulla justo. Aliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis. Sed ante. Vivamus tortor. Duis mattis egestas metus.",
+    "langTech": "HTML",
+    "timeSubmitted": "2022-05-01 18:31:28",
+    "lang_uid": "null"
+  },
+  "-NI5CPRMM_yzDLB4zmqY": {
+    "firebaseKey": "5f97cd34-1759-48d6-a66e-e7b43c4773ee",
+    "uid": "91e1b10d-1863-46e0-8554-c4feb2dcb589",
+    "title": "augue luctus tincidunt nulla",
+    "definition": "Duis aliquam convallis nunc. Proin at turpis a pede posuere nonummy. Integer non velit. Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi.",
+    "langTech": "Python",
+    "timeSubmitted": "2022-11-09 02:03:36",
+    "lang_uid": "null"
+  },
+  "-NI5CPRPmE13xdUX7N1_": {
+    "firebaseKey": "ab874817-287d-4a59-97d4-bbf225d108ca",
+    "uid": "8a3bc328-4e5a-45f7-a77e-f82fb5b19697",
+    "title": "ut rhoncus aliquet pulvinar sed",
+    "definition": "Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis. Fusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem. Sed sagittis. Nam congue, risus semper porta volutpat, quam pede lobortis ligula, sit amet eleifend pede libero quis orci. Nullam molestie nibh in lectus.",
+    "langTech": "JavaScript",
+    "timeSubmitted": "2022-05-09 10:08:18",
+    "lang_uid": "null"
+  },
+  "-NI5CPRR51s7UNvDLTxA": {
+    "firebaseKey": "04e71225-9ee4-4d93-a188-54741c16a253",
+    "uid": "f22ca051-68d9-40bf-bd04-96592b4bb395",
+    "title": "orci vehicula condimentum",
+    "definition": "Nullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh. In quis justo.",
+    "langTech": "JavaScript",
+    "timeSubmitted": "2022-07-04 16:43:38",
+    "lang_uid": "null"
+  },
+  "-NI5CPRT5_tKi_XoBePH": {
+    "firebaseKey": "5f8fc3e2-5056-4044-8d30-c64817166521",
+    "uid": "f9feb85a-eb4c-4740-bd19-f33e46c0871a",
+    "title": "vestibulum sit",
+    "definition": "Fusce consequat. Nulla nisl. Nunc nisl. Duis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus. Duis at velit eu est congue elementum. In hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante.",
+    "langTech": "Python",
+    "timeSubmitted": "2022-02-11 16:56:29",
+    "lang_uid": "null"
+  },
+  "-NI5CPRXy57Ai5rh9rb8": {
+    "firebaseKey": "d0169685-f598-447c-9095-7059b621ff00",
+    "uid": "bab7796e-52ab-487d-b56c-4e4fae28b9a0",
+    "title": "lobortis vel dapibus",
+    "definition": "Proin at turpis a pede posuere nonummy. Integer non velit. Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque. Duis bibendum.",
+    "langTech": "CSS",
+    "timeSubmitted": "2022-08-21 03:47:45",
+    "lang_uid": "null"
   }
 }
