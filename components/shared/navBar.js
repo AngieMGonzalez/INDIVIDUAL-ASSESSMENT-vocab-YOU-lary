@@ -2,7 +2,7 @@ import renderToDOM from '../../utils/renderToDom';
 
 const navBar = () => {
   const domString = `
-    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark mb-5">
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-secondary mb-5">
     <div class="container-fluid">
         <a class="navbar-brand title" href="#">Vocab-You-Lary</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
@@ -12,17 +12,17 @@ const navBar = () => {
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item active">
               <a class="nav-link" href="#" id="all-words">
-                All Books <span class="sr-only">(current)</span>
+                All Words <span class="sr-only">(current)</span>
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#" id="sale-books">Books on Sale</a>
+              <a class="nav-link" href="#" id="words-HTML">HTML Vocab</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#" id="authors">All Authors</a>
+              <a class="nav-link" href="#" id="words-CSS">CSS Vocab</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#" id="fave-authors">Fave Authors</a>
+              <a class="nav-link" href="#" id="words-JavaScript">JavaScript Vocab</a>
             </li>
             <li>
             <input
