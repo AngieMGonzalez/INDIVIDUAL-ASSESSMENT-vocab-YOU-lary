@@ -1,4 +1,4 @@
-const domEvents = (user) => {
+const domEvents = () => {
   document.querySelector('#main-container').addEventListener('click', (e) => {
     // CLICK EVENT FOR DELETING A WORD
     if (e.target.id.includes('delete-word')) {
