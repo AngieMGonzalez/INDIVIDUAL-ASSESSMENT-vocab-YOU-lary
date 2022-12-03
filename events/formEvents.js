@@ -1,17 +1,16 @@
 import { createVocabWord, getAllWords, updateVocabWord } from '../api/vocabwordsData';
 import showVocabWords from '../pages/words';
 
-const formEvents = () => {
+const formEvents = (user) => {
   document.querySelector('#main-container').addEventListener('submit', (e) => {
     e.preventDefault();
     // CLICK EVENT FOR SUBMITTING FORM FOR ADDING A vocabword
     if (e.target.id.includes('submit-word')) {
-      console.warn('CLICKED SUBMIT vocabword', e.target.id);
-
       const payload = {
         title: document.querySelector('#title').value,
         definition: document.querySelector('#definition').value,
-        langTech: document.querySelector('#langTech').value
+        langTech: document.querySelector('#langTech').value,
+        uid: user.uid
         // lang_id vs. langTech
       };
 
@@ -20,7 +19,7 @@ const formEvents = () => {
         const patchPayload = { firebaseKey: name };
 
         updateVocabWord(patchPayload).then(() => {
-          getAllWords().then(showVocabWords);
+          getAllWords(user.uid).then(showVocabWords);
         });
       });
     }
@@ -28,18 +27,17 @@ const formEvents = () => {
     // CLICK EVENT FOR EDITING/UPDATING A word
     if (e.target.id.includes('update-word')) {
       const [, firebaseKey] = e.target.id.split('--');
-      console.warn('CLICKED UPDATE word', e.target.id);
-      console.warn(firebaseKey);
 
       const payload = {
         title: document.querySelector('#title').value,
         definition: document.querySelector('#definition').value,
         langTech: document.querySelector('#langTech').value,
-        firebaseKey
+        firebaseKey,
+        uid: user.uid
       };
 
       updateVocabWord(payload).then(() => {
-        getAllWords().then(showVocabWords);
+        getAllWords(user.uid).then(showVocabWords);
       });
     }
     // el fin

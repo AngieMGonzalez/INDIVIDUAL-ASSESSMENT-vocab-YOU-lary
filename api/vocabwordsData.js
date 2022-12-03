@@ -3,8 +3,8 @@ import client from '../utils/client';
 const endpoint = client.databaseURL;
 
 // GET all vocabwords
-const getAllWords = () => new Promise((resolve, reject) => {
-  fetch(`${endpoint}/vocabwords.json`, {
+const getAllWords = (uid) => new Promise((resolve, reject) => {
+  fetch(`${endpoint}/vocabwords.json?orderBy="uid"&equalTo="${uid}"`, {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
@@ -77,40 +77,62 @@ const updateVocabWord = (payload) => new Promise((resolve, reject) => {
 });
 
 // filter by LangTech for navigation: CSS-words
-const wordsCSS = () => new Promise((resolve, reject) => {
-  fetch(`${endpoint}/vocabwords.json?orderBy="langTech"&equalTo="CSS"`, {
+const wordsCSS = (uid) => new Promise((resolve, reject) => {
+  fetch(`${endpoint}/vocabwords.json?orderBy="uid"&equalTo="${uid}"`, {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
     },
   })
     .then((response) => response.json())
-    .then((data) => resolve(Object.values(data)))
+    .then((data) => {
+      if (data) {
+        const wordsByCSS = Object.values(data).filter((item) => item.langTech === 'CSS');
+        resolve(wordsByCSS);
+      } else {
+        resolve([]);
+      }
+    })
     .catch(reject);
 });
 
 // filter words by words-JavaScript
-const wordsJS = () => new Promise((resolve, reject) => {
-  fetch(`${endpoint}/vocabwords.json?orderBy="langTech"&equalTo="JavaScript"`, {
+const wordsJS = (uid) => new Promise((resolve, reject) => {
+  fetch(`${endpoint}/vocabwords.json?orderBy="uid"&equalTo="${uid}"`, {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
     },
   })
     .then((response) => response.json())
-    .then((data) => resolve(Object.values(data)))
+    .then((data) => {
+      if (data) {
+        const wordsByJS = Object.values(data).filter((item) => item.langTech === 'JavaScript');
+        resolve(wordsByJS);
+      } else {
+        resolve([]);
+      }
+    })
     .catch(reject);
 });
 
-const wordsHTML = () => new Promise((resolve, reject) => {
-  fetch(`${endpoint}/vocabwords.json?orderBy="langTech"&equalTo="HTML"`, {
+// FILTER words-HTML
+const wordsHTML = (uid) => new Promise((resolve, reject) => {
+  fetch(`${endpoint}/vocabwords.json?orderBy="uid"&equalTo="${uid}"`, {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
     },
   })
     .then((response) => response.json())
-    .then((data) => resolve(Object.values(data)))
+    .then((data) => {
+      if (data) {
+        const wordsByHTML = Object.values(data).filter((item) => item.langTech === 'HTML');
+        resolve(wordsByHTML);
+      } else {
+        resolve([]);
+      }
+    })
     .catch(reject);
 });
 
