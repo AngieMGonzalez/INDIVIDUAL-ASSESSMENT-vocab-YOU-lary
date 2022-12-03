@@ -14,7 +14,9 @@ const addWordForm = (uid, obj = {}) => { // allows us to keep our code dry, reus
         <label for="definition">definition</label>
         <textarea class="form-control" placeholder="Word definition" id="definition" style="height: 100px">${obj.definition || ''}</textarea>
       </div>
-      <button type="submit" class="btn btn-primary">Submit Book
+      <div class="form-group" id="select-author">
+      </div>
+      <button type="submit" class="btn btn-primary">Submit Vocab Word
       </button>
     </form>`;
 

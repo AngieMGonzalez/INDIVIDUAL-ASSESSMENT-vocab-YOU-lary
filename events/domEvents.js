@@ -14,7 +14,7 @@ const domEvents = () => {
       console.warn('ADD word');
     }
 
-    // CLICK EVENT EDITING A BOOK // lives in books.js item.firebaseKey
+    // CLICK EVENT EDITING A word // item.firebaseKey
     if (e.target.id.includes('edit-word-btn')) {
       console.warn('EDIT word', e.target.id);
       console.warn(e.target.id.split('--'));
