@@ -15,20 +15,21 @@ const showVocabWords = (array) => {
   let domString = '';
   array.forEach((item) => {
     domString += `
-      <div class="card">
-        <div class="card-body" style="height: 180px;">
-          <h5 class="card-title">${item.title}</h5>
-          <p class="card-text bold">${item.definition}</p>
-          <p>${item.langTech}</p>
-            <hr>
-            <i id="edit-word-btn--${item.firebaseKey}" class="btn btn-info">
-            <span><i class="fas fa-edit"></i>edit</span>
-            </i>
-            <i id="delete-word-btn--${item.firebaseKey}" class="btn btn-danger">
-            <span><i class="fas fa-trash-alt"></i>delete</span>
-            </i>
+        <div class="card" style="width: 18rem;">
+          <div class="card-body">
+            <h5 class="card-title">${item.title}</h5>
+            <p class="card-text mb-2 bold">${item.definition}</p>
+            <h6 class="card-subtitle mb-2 text-muted bold">${item.langTech}</h6>
+              <hr>
+              <div id="edit-word-btn--${item.firebaseKey}" class="btn btn-info">
+              <span><i class="fas fa-edit"></i> edit</span>
+              </div>
+              <div id="delete-word-btn--${item.firebaseKey}" class="btn btn-danger">
+              <span><i class="fas fa-trash-alt"></i> delete</span>
+              </div>
+            </div>
         </div>
-      </div>`;
+      `;
   });
   renderToDOM('#main-container', domString);
 };
