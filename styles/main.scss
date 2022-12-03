@@ -1,10 +1,8 @@
 @import "~@fortawesome/fontawesome-free/css/all.min.css";
 @import "~bootstrap/scss/bootstrap";
 
-
 body {
   background-color: black;
-  color: rgb(176, 218, 181);
   text-align: center;
   margin-top: 100px;
 }
@@ -18,28 +16,6 @@ img {
   color: red;
   font-weight: 900;
   font-size: 2em;
-}
-
-.cart-items {
-  height: 300px;
-  overflow: scroll;
-}
-
-.grey-box {
-  float: left;
-  margin: 2px;
-  width: 200px;
-  height: 200px;
-}
-
-#cart-thumb img {
-  height: 100px;
-}
-
-.logout {
-  margin: 0 20px;
-  font-size: 25px;
-  color: white;
 }
 
 #main-container {
@@ -59,13 +35,9 @@ img {
     margin: auto;
     justify-content: center;
     color: white;
-
-    #formModal {
-      color: black;
-    }
   }
 
-  #store {
+  #main-container {
     width: 90%;
     display: flex;
     flex-flow: row wrap;
@@ -76,11 +48,6 @@ img {
     .card {
       width: 300px;
       margin: 5px;
-
-      .sale-badge {
-        font-size: 1em;
-        background-color: blue;
-      }
     }
 
     .table {
@@ -100,7 +67,7 @@ img {
     max-width: 60%;
   }
 
-  .description {
+  .definition {
     white-space: pre-wrap;
   }
 }

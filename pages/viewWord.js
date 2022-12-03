@@ -1,7 +1,7 @@
 import clearDom from '../utils/clearDom';
 import renderToDOM from '../utils/renderToDom';
 
-const viewBook = (obj) => {
+const viewWord = (obj) => {
   clearDom();
 
   const domString = `
@@ -23,4 +23,4 @@ const viewBook = (obj) => {
   renderToDOM('#view', domString);
 };
 
-export default viewBook;
+export default viewWord;

@@ -16,7 +16,6 @@ const showVocabWords = (array) => {
   array.forEach((item) => {
     domString += `
       <div class="card">
-        <img class="card-img-top" alt=${item.title} style="height: 400px;">
         <div class="card-body" style="height: 180px;">
           <h5 class="card-title">${item.title}</h5>
           <p class="card-text bold">${item.definition}</p>
