@@ -1,3 +1,5 @@
+import { getAllWords } from '../api/vocabwordsData';
+
 const domEvents = () => {
   document.querySelector('#main-container').addEventListener('click', (e) => {
     // CLICK EVENT FOR DELETING A WORD
@@ -6,6 +8,7 @@ const domEvents = () => {
       if (window.confirm('Want to delete?')) {
         console.warn('CLICKED DELETE word', e.target.id);
         console.warn(e.target.id.split('--'));
+        console.warn(getAllWords());
       }
     }
 
@@ -14,7 +17,7 @@ const domEvents = () => {
       console.warn('ADD word');
     }
 
-    // CLICK EVENT EDITING A BOOK // lives in books.js item.firebaseKey
+    // CLICK EVENT EDITING A word // item.firebaseKey
     if (e.target.id.includes('edit-word-btn')) {
       console.warn('EDIT word', e.target.id);
       console.warn(e.target.id.split('--'));

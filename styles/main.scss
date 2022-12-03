@@ -1,10 +1,73 @@
 @import "~@fortawesome/fontawesome-free/css/all.min.css";
 @import "~bootstrap/scss/bootstrap";
 
-
 body {
-  background-color: antiquewhite;
-  color: brown;
+  background-color: black;
   text-align: center;
   margin-top: 100px;
+}
+
+img {
+  width: 40px;
+}
+
+.navbar-dark .navbar-brand {
+  font-family: "Oregano", cursive !important;
+  color: red;
+  font-weight: 900;
+  font-size: 2em;
+}
+
+#main-container {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  margin-top: 100px;
+  align-content: center;
+
+  #add-button {
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  #form-container {
+    width: 60%;
+    margin: auto;
+    justify-content: center;
+    color: white;
+  }
+
+  #main-container {
+    width: 90%;
+    display: flex;
+    flex-flow: row wrap;
+    text-align: center;
+    margin: auto;
+    justify-content: center;
+
+    .card {
+      width: 300px;
+      margin: 5px;
+    }
+
+    .table {
+      margin: 10px;
+      width: 80%;
+      margin: 0 auto;
+    }
+  }
+}
+
+#view {
+  width: 90%;
+  margin: auto;
+
+  .details {
+    min-width: 50%;
+    max-width: 60%;
+  }
+
+  .definition {
+    white-space: pre-wrap;
+  }
 }

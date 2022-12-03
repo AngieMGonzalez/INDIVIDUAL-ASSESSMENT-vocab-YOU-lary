@@ -1,3 +1,5 @@
+import { getAllWords } from '../api/vocabwordsData';
+import showVocabWords from '../pages/words';
 import { signOut } from '../utils/auth';
 
 const navigationEvents = () => {
@@ -8,6 +10,7 @@ const navigationEvents = () => {
   // ALL words
   document.querySelector('#all-words').addEventListener('click', () => {
     console.warn('CLICKED ALL words');
+    getAllWords().then(showVocabWords);
   });
 };
 
