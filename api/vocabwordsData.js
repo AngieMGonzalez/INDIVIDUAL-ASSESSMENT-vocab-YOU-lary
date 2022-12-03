@@ -58,7 +58,7 @@ const createVocabWord = (payload) => new Promise((resolve, reject) => {
     body: JSON.stringify(payload),
   })
     .then((response) => response.json())
-    .then((data) => resolve(data))
+    .then((data) => resolve(data)) // will resolve a single object
     .catch(reject);
 });
 
@@ -76,10 +76,51 @@ const updateVocabWord = (payload) => new Promise((resolve, reject) => {
     .catch(reject);
 });
 
+// filter by LangTech for navigation: CSS-words
+const wordsCSS = () => new Promise((resolve, reject) => {
+  fetch(`${endpoint}/vocabwords.json?orderBy="langTech"&equalTo="CSS"`, {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  })
+    .then((response) => response.json())
+    .then((data) => resolve(Object.values(data)))
+    .catch(reject);
+});
+
+// filter words by words-JavaScript
+const wordsJS = () => new Promise((resolve, reject) => {
+  fetch(`${endpoint}/vocabwords.json?orderBy="langTech"&equalTo="JavaScript"`, {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  })
+    .then((response) => response.json())
+    .then((data) => resolve(Object.values(data)))
+    .catch(reject);
+});
+
+const wordsHTML = () => new Promise((resolve, reject) => {
+  fetch(`${endpoint}/vocabwords.json?orderBy="langTech"&equalTo="HTML"`, {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  })
+    .then((response) => response.json())
+    .then((data) => resolve(Object.values(data)))
+    .catch(reject);
+});
+
 export {
   getAllWords,
   createVocabWord,
   deleteVocabWord,
   getSingleVocabWord,
-  updateVocabWord
+  updateVocabWord,
+  wordsCSS,
+  wordsHTML,
+  wordsJS
 };
