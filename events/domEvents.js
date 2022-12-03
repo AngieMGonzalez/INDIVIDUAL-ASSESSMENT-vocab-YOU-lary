@@ -1,4 +1,5 @@
 import { getAllWords } from '../api/vocabwordsData';
+import addWordForm from '../components/forms/addWordForm';
 
 const domEvents = () => {
   document.querySelector('#main-container').addEventListener('click', (e) => {
@@ -15,6 +16,7 @@ const domEvents = () => {
     // CLICK EVENT FOR SHOWING FORM FOR ADDING A vocab word
     if (e.target.id.includes('add-word-btn')) {
       console.warn('ADD word');
+      addWordForm();
     }
 
     // CLICK EVENT EDITING A word // item.firebaseKey

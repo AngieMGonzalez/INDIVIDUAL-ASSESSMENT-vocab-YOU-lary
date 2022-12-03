@@ -9,7 +9,7 @@ import renderToDOM from '../utils/renderToDom';
 const showVocabWords = (array) => {
   clearDom();
 
-  const btnString = '<button class="btn btn-primary btn-lg mb-4" id="add-book-btn">Add A Vocab Word</button>';
+  const btnString = '<button class="btn btn-primary btn-lg mb-4" id="add-word-btn">Add A Vocab Word</button>';
   renderToDOM('#add-button', btnString);
 
   let domString = '';
@@ -31,7 +31,7 @@ const showVocabWords = (array) => {
         </div>
       `;
   });
-  renderToDOM('#main-container', domString);
+  renderToDOM('#inner-box', domString);
 };
 
 export default showVocabWords;

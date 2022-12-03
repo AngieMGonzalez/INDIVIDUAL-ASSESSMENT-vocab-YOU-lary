@@ -8,11 +8,11 @@ const addWordForm = (obj = {}) => { // allows us to keep our code dry, reusable 
   const domString = `
     <form id="${obj.firebaseKey ? `update-word--${obj.firebaseKey}` : 'submit-word'}" class="mb-4"> 
       <div class="form-group">
-        <label for="title">Vocabulary Word</label>
-        <input type="text" class="form-control" id="title" aria-describedby="vocab word" placeholder="Enter Vocab Word" value="${obj.title || ''}" required>
+        <label for="title">Vocabulary Word/Title</label>
+        <input type="text" class="form-control" id="title" aria-describedby="vocabWord" placeholder="Enter Vocab Word/Title" value="${obj.title || ''}" required>
       </div>
       <div class="form-group">
-        <label for="definition">definition</label>
+        <label for="definition">Definition</label>
         <textarea class="form-control" placeholder="Word definition" id="definition" style="height: 100px">${obj.definition || ''}</textarea>
       </div>
       <div class="form-group" id="select-language">
