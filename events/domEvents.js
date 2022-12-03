@@ -1,5 +1,6 @@
-import { getAllWords } from '../api/vocabwordsData';
+import { deleteVocabWord, getAllWords } from '../api/vocabwordsData';
 import addWordForm from '../components/forms/addWordForm';
+import showVocabWords from '../pages/words';
 
 const domEvents = () => {
   document.querySelector('#main-container').addEventListener('click', (e) => {
@@ -7,9 +8,14 @@ const domEvents = () => {
     if (e.target.id.includes('delete-word')) {
       // eslint-disable-next-line no-alert
       if (window.confirm('Want to delete?')) {
-        console.warn('CLICKED DELETE word', e.target.id);
-        console.warn(e.target.id.split('--'));
-        console.warn(getAllWords());
+        // console.warn('CLICKED DELETE word', e.target.id);
+        // console.warn(e.target.id.split('--'));
+        // console.warn(getAllWords());
+        const [, firebaseKey] = e.target.id.split('--');
+
+        deleteVocabWord(firebaseKey).then(() => {
+          getAllWords().then(showVocabWords); // we call it inside of delete word cause it needs to go in sequence ?
+        }); // we don't want to erase conditioning ?
       }
     }
 
