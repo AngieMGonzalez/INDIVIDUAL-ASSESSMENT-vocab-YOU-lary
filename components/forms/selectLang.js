@@ -11,7 +11,7 @@ const selectLang = (user, obj = {}) => {
       domString += `
       <option value="${item.language}" >${item.language}</option>
       `;
-    });
+    }); // languages vs words properties/values
     domString += '</select>';
     renderToDOM('#select-language', domString);
     const select = document.querySelector('#languages');
