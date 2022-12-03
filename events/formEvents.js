@@ -11,7 +11,7 @@ const formEvents = () => {
       const payload = {
         title: document.querySelector('#title').value,
         definition: document.querySelector('#definition').value,
-        langTech: document.querySelector('#langTech').value,
+        langTech: document.querySelector('#langTech').value
         // lang_id vs. langTech
       };
 
@@ -30,8 +30,18 @@ const formEvents = () => {
       const [, firebaseKey] = e.target.id.split('--');
       console.warn('CLICKED UPDATE word', e.target.id);
       console.warn(firebaseKey);
-    }
 
+      const payload = {
+        title: document.querySelector('#title').value,
+        definition: document.querySelector('#definition').value,
+        langTech: document.querySelector('#langTech').value,
+        firebaseKey
+      };
+
+      updateVocabWord(payload).then(() => {
+        getAllWords().then(showVocabWords);
+      });
+    }
     // el fin
   });
 };

@@ -1,4 +1,4 @@
-import { deleteVocabWord, getAllWords } from '../api/vocabwordsData';
+import { deleteVocabWord, getAllWords, getSingleVocabWord } from '../api/vocabwordsData';
 import addWordForm from '../components/forms/addWordForm';
 import showVocabWords from '../pages/words';
 
@@ -25,15 +25,17 @@ const domEvents = () => {
       addWordForm();
     }
 
-    // CLICK EVENT EDITING A word // item.firebaseKey
+    // CLICK EVENT EDITING/UPDATE A word // item.firebaseKey
     if (e.target.id.includes('edit-word-btn')) {
       console.warn('EDIT word', e.target.id);
       console.warn(e.target.id.split('--'));
-    }
-    // CLICK EVENT FOR VIEW BOOK DETAILS
-    if (e.target.id.includes('view-word-btn')) {
-      console.warn('VIEW word', e.target.id);
-      console.warn(e.target.id.split('--'));
+      const [, firebaseKey] = e.target.id.split('--'); // if this is problem
+
+      getSingleVocabWord(firebaseKey).then((wordObj) => addWordForm(wordObj));
+      // it is expecting as the first parameter, the userid, but im passing it the whole object
+      // get single book param in api bookData.js
+      // getSingleVocabWord(firebaseKey).then(addWordForm);
+      // using the callback method
     }
     // el fin
   });
