@@ -22,7 +22,8 @@ const addWordForm = (obj = {}) => { // allows us to keep our code dry, reusable 
     </form>`;
 
   renderToDOM('#form-container', domString);
-  selectLang(`${obj.lang_id || ''}`); // function creating select dropdown menu
+  selectLang(`${obj.langTech || ''}`); // function creating select dropdown menu
+  // lang_id vs. langTech
 };
 
 export default addWordForm;

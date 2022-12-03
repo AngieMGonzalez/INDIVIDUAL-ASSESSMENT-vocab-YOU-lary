@@ -11,7 +11,8 @@ const formEvents = () => {
       const payload = {
         title: document.querySelector('#title').value,
         definition: document.querySelector('#definition').value,
-        lang_id: document.querySelector('#lang_id').value,
+        langTech: document.querySelector('#langTech').value,
+        // lang_id vs. langTech
       };
 
       console.warn(payload);
