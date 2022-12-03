@@ -1,9 +1,7 @@
 const clearDOM = () => {
+  document.querySelector('#inner-box').innerHTML = '';
   document.querySelector('#add-button').innerHTML = '';
   document.querySelector('#form-container').innerHTML = '';
-  document.querySelector('#main-container').innerHTML = '';
-  document.querySelector('#view').innerHTML = '';
-  document.querySelector('#login-form-container').innerHTML = '';
 };
 
 export default clearDOM;
