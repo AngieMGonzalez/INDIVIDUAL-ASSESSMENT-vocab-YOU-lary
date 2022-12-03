@@ -1,8 +1,9 @@
 import clearDOM from '../../utils/clearDom';
 import renderToDOM from '../../utils/renderToDom';
+import selectLang from './selectLang';
 
 // USING THIS FORM FOR BOTH CREATE AND UPDATE
-const addWordForm = (uid, obj = {}) => { // allows us to keep our code dry, reusable func, were dot notating
+const addWordForm = (obj = {}) => { // allows us to keep our code dry, reusable func, were dot notating
   clearDOM(); // you can call the function and it would default paramater thats an empty object
   const domString = `
     <form id="${obj.firebaseKey ? `update-word--${obj.firebaseKey}` : 'submit-word'}" class="mb-4"> 
@@ -14,14 +15,14 @@ const addWordForm = (uid, obj = {}) => { // allows us to keep our code dry, reus
         <label for="definition">definition</label>
         <textarea class="form-control" placeholder="Word definition" id="definition" style="height: 100px">${obj.definition || ''}</textarea>
       </div>
-      <div class="form-group" id="select-author">
+      <div class="form-group" id="select-language">
       </div>
       <button type="submit" class="btn btn-primary">Submit Vocab Word
       </button>
     </form>`;
 
   renderToDOM('#form-container', domString);
-  // selectLang(uid, `${obj.lang_id || ''}`); // function creating select dropdown menu
+  selectLang(`${obj.lang_id || ''}`); // function creating select dropdown menu
 };
 
 export default addWordForm;
