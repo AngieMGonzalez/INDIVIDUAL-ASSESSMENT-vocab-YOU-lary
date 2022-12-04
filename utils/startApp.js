@@ -7,15 +7,15 @@ import formEvents from '../events/formEvents';
 import navigationEvents from '../events/navEvents';
 import showVocabWords from '../pages/words';
 
-const startApp = () => {
-  domBuilder();
-  domEvents();
-  formEvents();
+const startApp = (user) => {
+  domBuilder(user);
+  domEvents(user);
+  formEvents(user);
   navBar();
   logoutButton();
-  navigationEvents();
+  navigationEvents(user);
 
-  getAllWords().then((words) => showVocabWords(words));
+  getAllWords(user.uid).then((words) => showVocabWords(words));
 };
 
 export default startApp;

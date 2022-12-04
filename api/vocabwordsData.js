@@ -3,8 +3,8 @@ import client from '../utils/client';
 const endpoint = client.databaseURL;
 
 // GET all vocabwords
-const getAllWords = () => new Promise((resolve, reject) => {
-  fetch(`${endpoint}/vocabwords.json`, {
+const getAllWords = (uid) => new Promise((resolve, reject) => {
+  fetch(`${endpoint}/vocabwords.json?orderBy="uid"&equalTo="${uid}"`, {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
@@ -58,7 +58,7 @@ const createVocabWord = (payload) => new Promise((resolve, reject) => {
     body: JSON.stringify(payload),
   })
     .then((response) => response.json())
-    .then((data) => resolve(data))
+    .then((data) => resolve(data)) // will resolve a single object
     .catch(reject);
 });
 
@@ -76,10 +76,73 @@ const updateVocabWord = (payload) => new Promise((resolve, reject) => {
     .catch(reject);
 });
 
+// filter by LangTech for navigation: CSS-words
+const wordsCSS = (uid) => new Promise((resolve, reject) => {
+  fetch(`${endpoint}/vocabwords.json?orderBy="uid"&equalTo="${uid}"`, {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      if (data) {
+        const wordsByCSS = Object.values(data).filter((item) => item.langTech === 'CSS');
+        resolve(wordsByCSS);
+      } else {
+        resolve([]);
+      }
+    })
+    .catch(reject);
+});
+
+// filter words by words-JavaScript
+const wordsJS = (uid) => new Promise((resolve, reject) => {
+  fetch(`${endpoint}/vocabwords.json?orderBy="uid"&equalTo="${uid}"`, {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      if (data) {
+        const wordsByJS = Object.values(data).filter((item) => item.langTech === 'JavaScript');
+        resolve(wordsByJS);
+      } else {
+        resolve([]);
+      }
+    })
+    .catch(reject);
+});
+
+// FILTER words-HTML
+const wordsHTML = (uid) => new Promise((resolve, reject) => {
+  fetch(`${endpoint}/vocabwords.json?orderBy="uid"&equalTo="${uid}"`, {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      if (data) {
+        const wordsByHTML = Object.values(data).filter((item) => item.langTech === 'HTML');
+        resolve(wordsByHTML);
+      } else {
+        resolve([]);
+      }
+    })
+    .catch(reject);
+});
+
 export {
   getAllWords,
   createVocabWord,
   deleteVocabWord,
   getSingleVocabWord,
-  updateVocabWord
+  updateVocabWord,
+  wordsCSS,
+  wordsHTML,
+  wordsJS
 };

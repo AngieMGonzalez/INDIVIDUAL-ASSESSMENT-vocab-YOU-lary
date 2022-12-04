@@ -3,7 +3,7 @@ import renderToDOM from '../../utils/renderToDom';
 import selectLang from './selectLang';
 
 // USING THIS FORM FOR BOTH CREATE AND UPDATE
-const addWordForm = (obj = {}) => { // allows us to keep our code dry, reusable func, were dot notating
+const addWordForm = (uid, obj = {}) => { // allows us to keep our code dry, reusable func, were dot notating
   clearDOM(); // you can call the function and it would default paramater thats an empty object
   const domString = `
     <form id="${obj.firebaseKey ? `update-word--${obj.firebaseKey}` : 'submit-word'}" class="mb-4"> 
@@ -22,7 +22,7 @@ const addWordForm = (obj = {}) => { // allows us to keep our code dry, reusable 
     </form>`;
 
   renderToDOM('#form-container', domString);
-  selectLang(`${obj.langTech || ''}`); // function creating select dropdown menu
+  selectLang(uid, obj); // function creating select dropdown menu
   // lang_id vs. langTech
 };
 
