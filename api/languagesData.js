@@ -1,9 +1,10 @@
 import client from '../utils/client';
 
 const endpoint = client.databaseURL;
+
 // GET all LANGUAGES/technology
-const getLangTechs = (user) => new Promise((resolve, reject) => {
-  fetch(`${endpoint}/langtech.json?orderBy="uid"&equalTo="${user.uid}"`, {
+const getLangTechs = (uid) => new Promise((resolve, reject) => {
+  fetch(`${endpoint}/langtech.json?orderBy="uid"&equalTo="${uid}"`, {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',

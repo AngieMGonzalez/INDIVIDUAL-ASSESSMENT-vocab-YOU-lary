@@ -22,14 +22,12 @@ img {
 #main-container {
   display: flex;
   flex-direction: column;
-  margin: 0 auto;
-  margin-top: 100px;
   align-content: center;
 }
 
   #inner-box {
   width: 90%;
-  flex-flow: row wrap;
+  // flex-flow: row wrap;
   text-align: center;
   margin: auto;
   justify-content: center;
