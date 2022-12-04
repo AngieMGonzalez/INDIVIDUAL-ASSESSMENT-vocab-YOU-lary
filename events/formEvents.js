@@ -10,6 +10,7 @@ const formEvents = (user) => {
         title: document.querySelector('#title').value,
         definition: document.querySelector('#definition').value,
         langTech: document.querySelector('#langTech').value, // error at value used to be langTech
+        timeSubmitted: new Date().getUTCDate(), // record timestamp function
         uid: user.uid
         // lang_id vs. langTech
       };
@@ -32,6 +33,7 @@ const formEvents = (user) => {
         title: document.querySelector('#title').value,
         definition: document.querySelector('#definition').value,
         langTech: document.querySelector('#langTech').value, // error at value
+        timeSubmitted: new Date().getUTCDate(),
         firebaseKey,
         uid: user.uid
       };

@@ -22,7 +22,7 @@ const addWordForm = (uid, obj = {}) => { // allows us to keep our code dry, reus
     </form>`;
 
   renderToDOM('#form-container', domString);
-  selectLang(uid, `${obj.langTech || ''}`); // function creating select dropdown menu
+  selectLang(uid, obj); // function creating select dropdown menu
   // lang_id vs. langTech
 };
 

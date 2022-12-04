@@ -23,11 +23,12 @@ const domEvents = (user) => {
     if (e.target.id.includes('add-word-btn')) {
       console.warn('ADD word');
       addWordForm(user.uid);
+      console.warn('this is the user.uid', user.uid);
     }
 
     // CLICK EVENT EDITING/UPDATE A word // item.firebaseKey
     if (e.target.id.includes('edit-word-btn')) {
-      console.warn('EDIT word', e.target.id);
+      console.warn('clicked EDIT word and heres the id', e.target.id);
       console.warn(e.target.id.split('--'));
       const [, firebaseKey] = e.target.id.split('--'); // if this is problem
 
