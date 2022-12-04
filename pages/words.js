@@ -22,10 +22,10 @@ const showVocabWords = (array) => {
             <h6 class="card-subtitle mb-2 text-muted bold">${item.langTech}</h6>
               <hr>
               <div id="edit-word-btn--${item.firebaseKey}" class="btn btn-info">
-              <span><i class="fas fa-edit"></i> edit</span>
+                <i class="fas fa-edit"></i> edit
               </div>
               <div id="delete-word-btn--${item.firebaseKey}" class="btn btn-danger">
-              <span><i class="fas fa-trash-alt"></i> delete</span>
+                <i class="fas fa-trash-alt"></i> delete
               </div>
             </div>
         </div>
