@@ -9,7 +9,7 @@ const formEvents = (user) => {
       const payload = {
         title: document.querySelector('#title').value,
         definition: document.querySelector('#definition').value,
-        langTech: document.querySelector('#languages').value, // error at value used to be langTech
+        langTech: document.querySelector('#langTech').value, // error at value used to be langTech
         uid: user.uid
         // lang_id vs. langTech
       };
@@ -31,7 +31,7 @@ const formEvents = (user) => {
       const payload = {
         title: document.querySelector('#title').value,
         definition: document.querySelector('#definition').value,
-        langTech: document.querySelector('#languages').value, // error at value
+        langTech: document.querySelector('#langTech').value, // error at value
         firebaseKey,
         uid: user.uid
       };

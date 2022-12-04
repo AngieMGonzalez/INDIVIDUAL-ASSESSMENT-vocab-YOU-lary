@@ -4,7 +4,7 @@ import getLangTechs from '../../api/languagesData';
 const selectLang = (uid, languageId) => {
   let domString = `
   <label for="languages">Select Language/Tech</label>
-  <select class="form-control" id="languages" required>
+  <select class="form-control" id="langTech" required>
   <option value="">Select Language/Tech</option>`;
 
   getLangTechs(uid).then((langArray) => {
