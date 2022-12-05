@@ -84,9 +84,13 @@ This app focuses an all the vocubalary words under each language/technology of c
 [View App](vocab-you-lary-gonzalez.netlify.app)
 
 #You can clone it and start editing here
-## General Layout of the Land: 
-- [ERD](https://dbdiagram.io/d/63857f39c9abfc611175c8fc)
-- [mockaroo faux data for](https://www.mockaroo.com/d6d30cd0)
+## ERD 
+- [ERD with dbdiagram](https://dbdiagram.io/d/63857f39c9abfc611175c8fc)
+- [mockaroo faux data](https://www.mockaroo.com/d6d30cd0)
 Premises of the assumptions for the relationship between vocab words data and Language/Tech data: 
-- that a Language/Tech can have man words
+- that a Language/Tech can have many words
 - and a vocabulary word can only have one Langauge/Tech
+
+## Get Started 
+```$ git clone git@github.com:AngieMGonzalez/INDIVIDUAL-ASSESSMENT-vocab-YOU-lary.git
+$ cd INDIVIDUAL-ASSESSMENT-vocab-YOU-lary```

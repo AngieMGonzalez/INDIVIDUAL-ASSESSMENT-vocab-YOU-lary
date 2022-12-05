@@ -7,10 +7,7 @@ const domEvents = (user) => {
     // CLICK EVENT FOR DELETING A WORD
     if (e.target.id.includes('delete-word')) {
       // eslint-disable-next-line no-alert
-      if (window.confirm('Want to delete?')) {
-        // console.warn('CLICKED DELETE word', e.target.id);
-        // console.warn(e.target.id.split('--'));
-        // console.warn(getAllWords());
+      if (window.confirm('Want to delete this word?')) {
         const [, firebaseKey] = e.target.id.split('--');
 
         deleteVocabWord(firebaseKey).then(() => {
@@ -21,15 +18,11 @@ const domEvents = (user) => {
 
     // CLICK EVENT FOR SHOWING FORM FOR ADDING A vocab word
     if (e.target.id.includes('add-word-btn')) {
-      console.warn('ADD word');
       addWordForm(user.uid);
-      console.warn('this is the user.uid', user.uid);
     }
 
     // CLICK EVENT EDITING/UPDATE A word // item.firebaseKey
     if (e.target.id.includes('edit-word-btn')) {
-      console.warn('clicked EDIT word and heres the id', e.target.id);
-      console.warn(e.target.id.split('--'));
       const [, firebaseKey] = e.target.id.split('--'); // if this is problem
 
       getSingleVocabWord(firebaseKey).then((wordObj) => addWordForm(user.uid, wordObj));
