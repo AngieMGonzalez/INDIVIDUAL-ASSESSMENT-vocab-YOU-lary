@@ -79,6 +79,14 @@ init();
 - Visit the [Webpack documentation](https://webpack.js.org/concepts/) if you want to explore more.
 - [Info on our Webpack Config](https://github.com/nss-nightclass-projects/Night-Class-Resources/blob/master/book-2-patterns-and-tools/chapters/webpack-configure.md)
 
-## ERD
-- [ERD] (https://dbdiagram.io/d/63857f39c9abfc611175c8fc)
-- 
+# Coding vocab-YOU-lary A.B.C.s [![Netlify Status](https://api.netlify.com/api/v1/badges/02ec0fc7-b3ae-4e19-b7e8-3ddca288b530/deploy-status)](https://app.netlify.com/sites/vocab-you-lary-gonzalez/deploys)
+This app focuses an all the vocubalary words under each language/technology of coding. Each language/technology has a plethora of vocabulary words sorted within it. 
+[View App](vocab-you-lary-gonzalez.netlify.app)
+
+#You can clone it and start editing here
+## General Layout of the Land: 
+- [ERD](https://dbdiagram.io/d/63857f39c9abfc611175c8fc)
+- [mockaroo faux data for](https://www.mockaroo.com/d6d30cd0)
+Premises of the assumptions for the relationship between vocab words data and Language/Tech data: 
+- that a Language/Tech can have man words
+- and a vocabulary word can only have one Langauge/Tech

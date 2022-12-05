@@ -16,7 +16,7 @@ const viewWord = (obj) => {
    <div class="text-white ms-5 details">
      <p>${obj.definition || ''}</p>
      <hr>
-     <p>${obj.langTech}</p>      
+     <p>${obj.langTech}</p>
       </div>
     </div>`;
 
