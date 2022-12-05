@@ -83,7 +83,6 @@ init();
 This app focuses an all the vocubalary words under each language/technology of coding. Each language/technology has a plethora of vocabulary words sorted within it. 
 [View App](vocab-you-lary-gonzalez.netlify.app)
 
-#You can clone it and start editing here
 ## ERD 
 - [ERD with dbdiagram](https://dbdiagram.io/d/63857f39c9abfc611175c8fc)
 - [mockaroo faux data](https://www.mockaroo.com/d6d30cd0)
@@ -92,12 +91,13 @@ Premises of the assumptions for the relationship between vocab words data and La
 - and a vocabulary word can only have one Langauge/Tech
 
 ## Get Started 
-```$ git clone git@github.com:AngieMGonzalez/INDIVIDUAL-ASSESSMENT-vocab-YOU-lary.git
-```$ cd INDIVIDUAL-ASSESSMENT-vocab-YOU-lary ```
+You can clone it and start editing here
+`$ git clone git@github.com:AngieMGonzalez/INDIVIDUAL-ASSESSMENT-vocab-YOU-lary.git`
+`$ cd INDIVIDUAL-ASSESSMENT-vocab-YOU-lary`
 
 From [Webpack Template-5.x](https://github.com/codetracker-learning/INDIVIDUAL-ASSESSMENT-vocab-YOU-lary)
 
-## About the User <!-- This is a scaled down user persona -->
+## About the User
 - The ideal user for this application is a begginning coder
 - They would like to keep track of new terms/words/vocabulary of coding languages with definitions of each of the words
 - The problem this app solves for them is it allows them to start creating flash cards of vocabulary words and quickly filter each term by the language type/technology that that word refers to
@@ -110,7 +110,7 @@ From [Webpack Template-5.x](https://github.com/codetracker-learning/INDIVIDUAL-A
 ## Video Walkthrough of Coding vocab-YOU-lary A.B.C.s
 insert loom link
 
-## Relevant Links <!-- Link to all the things that are required outside of the ones that have their own section -->
+## Relevant Links 
 - [Check out the deployed site](https://vocab-you-lary-gonzalez.netlify.app)
 - [Wireframes](https://www.figma.com/file/IW4jF3GnzCFLYbEXlgFNIZ/MVP)
 
