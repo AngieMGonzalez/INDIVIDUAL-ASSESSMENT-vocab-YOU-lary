@@ -91,11 +91,12 @@ Premises of the assumptions for the relationship between vocab words data and La
 - and a vocabulary word can only have one Langauge/Tech
 
 ## Get Started 
-You can clone it and start editing here
-`$ git clone git@github.com:AngieMGonzalez/INDIVIDUAL-ASSESSMENT-vocab-YOU-lary.git`
+- You can clone it and start editing here
+`$ git clone git@github.com:AngieMGonzalez/INDIVIDUAL-ASSESSMENT-vocab-YOU-lary.git` 
+
 `$ cd INDIVIDUAL-ASSESSMENT-vocab-YOU-lary`
 
-From [Webpack Template-5.x](https://github.com/codetracker-learning/INDIVIDUAL-ASSESSMENT-vocab-YOU-lary)
+- Originally started from [Webpack Template-5.x](https://github.com/codetracker-learning/INDIVIDUAL-ASSESSMENT-vocab-YOU-lary)
 
 ## About the User
 - The ideal user for this application is a begginning coder
@@ -108,7 +109,7 @@ From [Webpack Template-5.x](https://github.com/codetracker-learning/INDIVIDUAL-A
 - Vocabulary Word Editing: You can edit and recatagorize each word and you can delete each word
 
 ## Video Walkthrough of Coding vocab-YOU-lary A.B.C.s
-insert loom link
+https://www.loom.com/share/5ef7fe33711c4e73a703befe41bb85c1
 
 ## Relevant Links 
 - [Check out the deployed site](https://vocab-you-lary-gonzalez.netlify.app)
@@ -117,6 +118,7 @@ insert loom link
 ## Project Screenshots 
 - Log in screen
 <img width="1148" alt="log in page" src="/assets/login.png">
+
 - Main page
 <img width="1148" alt="main page" src="/assets/mainpage.png">
 
