@@ -93,4 +93,28 @@ Premises of the assumptions for the relationship between vocab words data and La
 
 ## Get Started 
 ```$ git clone git@github.com:AngieMGonzalez/INDIVIDUAL-ASSESSMENT-vocab-YOU-lary.git
-$ cd INDIVIDUAL-ASSESSMENT-vocab-YOU-lary```
+```$ cd INDIVIDUAL-ASSESSMENT-vocab-YOU-lary
+From [Webpack Template-5.x](https://github.com/codetracker-learning/INDIVIDUAL-ASSESSMENT-vocab-YOU-lary)
+
+## About the User <!-- This is a scaled down user persona -->
+- The ideal user for this application is a begginning coder
+- They would like to keep track of new terms/words/vocabulary of coding languages with definitions of each of the words
+- The problem this app solves for them is it allows them to start creating flash cards of vocabulary words and quickly filter each term by the language type/technology that that word refers to
+
+## Features 
+- When a new vocabulary word is added, an object should be created and that object should be pushed into the firebase API and a new card of that vocab word prints to the DOM.
+- Filters: There is a required langauge/technology type when creating a new word and you can filter each different list of language/technology words through the buttons in the navigation bar
+- Vocabulary Word Editing: You can edit and recatagorize each word and you can delete each word
+
+## Video Walkthrough of Coding vocab-YOU-lary A.B.C.s
+insert loom link
+
+## Relevant Links <!-- Link to all the things that are required outside of the ones that have their own section -->
+- [Check out the deployed site](https://vocab-you-lary-gonzalez.netlify.app)
+- [Wireframes](https://www.figma.com/file/IW4jF3GnzCFLYbEXlgFNIZ/MVP)
+
+## Project Screenshots <!-- These can be inside of your project. Look at the repos from class and see how the images are included in the readme -->
+<img width="1148" alt="Your Alt" src="your-link.png">
+
+## Contributors
+- [YOUR NAME](https://github.com/your-github-url)
