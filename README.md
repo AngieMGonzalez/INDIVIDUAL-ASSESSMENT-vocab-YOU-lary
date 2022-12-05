@@ -93,7 +93,8 @@ Premises of the assumptions for the relationship between vocab words data and La
 
 ## Get Started 
 ```$ git clone git@github.com:AngieMGonzalez/INDIVIDUAL-ASSESSMENT-vocab-YOU-lary.git
-```$ cd INDIVIDUAL-ASSESSMENT-vocab-YOU-lary
+```$ cd INDIVIDUAL-ASSESSMENT-vocab-YOU-lary ```
+
 From [Webpack Template-5.x](https://github.com/codetracker-learning/INDIVIDUAL-ASSESSMENT-vocab-YOU-lary)
 
 ## About the User <!-- This is a scaled down user persona -->
@@ -113,8 +114,11 @@ insert loom link
 - [Check out the deployed site](https://vocab-you-lary-gonzalez.netlify.app)
 - [Wireframes](https://www.figma.com/file/IW4jF3GnzCFLYbEXlgFNIZ/MVP)
 
-## Project Screenshots <!-- These can be inside of your project. Look at the repos from class and see how the images are included in the readme -->
-<img width="1148" alt="Your Alt" src="your-link.png">
+## Project Screenshots 
+- Log in screen
+<img width="1148" alt="log in page" src="/assets/login.png">
+- Main page
+<img width="1148" alt="main page" src="/assets/mainpage.png">
 
 ## Contributors
-- [YOUR NAME](https://github.com/your-github-url)
+- [Angie Gonzalez](https://github.com/AngieMGonzalez)

@@ -11,7 +11,7 @@ const selectLang = (uid, obj = {}) => {
     langArray.forEach((langObj) => {
       domString += `
       <option 
-        value="${langObj.language}">
+        value="${langObj.language}" ${langObj === obj.langTech ? 'selected' : ''}>
           ${langObj.language}
       </option>`;
     }); // languages vs words properties/values
