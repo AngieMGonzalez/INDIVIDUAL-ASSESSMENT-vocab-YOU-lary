@@ -1,5 +1,6 @@
 import { createVocabWord, getAllWords, updateVocabWord } from '../api/vocabwordsData';
 import showVocabWords from '../pages/words';
+import dateString from '../utils/timeSubmitted';
 
 const formEvents = (user) => {
   document.querySelector('#main-container').addEventListener('submit', (e) => {
@@ -10,7 +11,7 @@ const formEvents = (user) => {
         title: document.querySelector('#title').value,
         definition: document.querySelector('#definition').value,
         langTech: document.querySelector('#langTech').value,
-        timeSubmitted: new Date().getUTCDate(), // record timestamp
+        timeSubmitted: dateString, // timestamp
         uid: user.uid
         // lang_id vs. langTech
       };
@@ -32,7 +33,7 @@ const formEvents = (user) => {
         title: document.querySelector('#title').value,
         definition: document.querySelector('#definition').value,
         langTech: document.querySelector('#langTech').value, // error at value
-        timeSubmitted: new Date().getUTCDate(),
+        timeSubmitted: dateString,
         firebaseKey,
         uid: user.uid
       };
