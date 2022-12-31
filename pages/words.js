@@ -9,7 +9,10 @@ import renderToDOM from '../utils/renderToDom';
 const showVocabWords = (array) => {
   clearDom();
 
-  const btnString = '<button class="btn btn-primary btn-lg mb-4" id="add-word-btn">Add A Vocab Word</button>';
+  const btnString = `
+    <button class="btn btn-primary btn-lg mb-4" id="add-word-btn">Add A Vocab Word</button>
+    <button class="btn btn-info btn-lg mb-4" id="create-lang-btn">Create a Language/Tech</button>
+    `;
   renderToDOM('#add-button', btnString);
 
   let domString = '';

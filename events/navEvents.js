@@ -6,15 +6,14 @@ import { signOut } from '../utils/auth';
 
 const navigationEvents = (user) => {
   // LOGOUT BUTTON
-  document.querySelector('#logout-button')
-    .addEventListener('click', signOut);
+  document.querySelector('#logout-button').addEventListener('click', signOut);
 
   // ALL words
   document.querySelector('#all-words').addEventListener('click', () => {
     getAllWords(user.uid).then(showVocabWords);
   });
 
-  // FILTERS words by CSS
+  // FILTERS words by language
   document.querySelector('#words-CSS').addEventListener('click', () => {
     wordsCSS(user.uid).then(showVocabWords);
   });

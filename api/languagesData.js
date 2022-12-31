@@ -21,4 +21,32 @@ const getLangTechs = (uid) => new Promise((resolve, reject) => {
     .catch(reject);
 });
 
-export default getLangTechs;
+// create a language/technology
+const createLanguage = (payload) => new Promise((resolve, reject) => {
+  fetch(`${endpoint}/langtech.json`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(payload),
+  })
+    .then((response) => response.json())
+    .then((data) => resolve(data))
+    .catch(reject);
+});
+
+// update a language/technology
+const updateLanguage = (payload) => new Promise((resolve, reject) => {
+  fetch(`${endpoint}/langtech/${payload.firebaseKey}.json`, {
+    method: 'PATCH',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(payload),
+  })
+    .then((response) => response.json())
+    .then(resolve)
+    .catch(reject);
+});
+
+export { getLangTechs, createLanguage, updateLanguage };

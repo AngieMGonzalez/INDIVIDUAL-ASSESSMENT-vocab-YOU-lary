@@ -1,12 +1,12 @@
+import { getLangTechs } from '../../api/languagesData';
 import renderToDOM from '../../utils/renderToDom';
-import getLangTechs from '../../api/languagesData';
 
 const selectLang = (uid, obj = {}) => {
   let domString = `
   <label for="languages">Select Language/Tech</label>
   <select class="form-control" id="langTech" required>
   <option value="OTHER">Select Language/Tech</option>`;
-
+  // put an add lanugage function - button and form - uid later button
   getLangTechs(uid).then((langArray) => {
     langArray.forEach((langObj) => {
       domString += `
