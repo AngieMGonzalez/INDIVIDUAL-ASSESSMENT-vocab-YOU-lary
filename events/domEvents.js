@@ -1,4 +1,5 @@
 import { deleteVocabWord, getAllWords, getSingleVocabWord } from '../api/vocabwordsData';
+import addLangForm from '../components/forms/addLangForm';
 import addWordForm from '../components/forms/addWordForm';
 import showVocabWords from '../pages/words';
 
@@ -19,6 +20,12 @@ const domEvents = (user) => {
     // CLICK EVENT FOR SHOWING FORM FOR ADDING A vocab word
     if (e.target.id.includes('add-word-btn')) {
       addWordForm(user.uid);
+    }
+
+    // CLICK EVENT FOR SHOWING FORM FOR ADDING A vocab word
+    if (e.target.id.includes('create-lang-btn')) {
+      addLangForm(user.uid);
+      console.warn('you clicked the add language/technology btn', e.target.id);
     }
 
     // CLICK EVENT EDITING/UPDATE A word // item.firebaseKey

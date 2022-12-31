@@ -1,3 +1,4 @@
+import { createLanguage, updateLanguage } from '../api/languagesData';
 import { createVocabWord, getAllWords, updateVocabWord } from '../api/vocabwordsData';
 import showVocabWords from '../pages/words';
 import dateString from '../utils/timeSubmitted';
@@ -42,6 +43,25 @@ const formEvents = (user) => {
         getAllWords(user.uid).then(showVocabWords);
       });
     }
+    // clicke event for submitting/creating a language/technolgy
+    if (e.target.id.includes('submit-language')) {
+      console.warn('CLICKED SUBMIT language');
+
+      const payload = {
+        langTech: document.querySelector('#language-technology').value,
+        uid: user.uid
+      };
+
+      console.warn(payload);
+      createLanguage(payload).then(({ name }) => {
+        const patchPayload = { firebaseKey: name };
+
+        updateLanguage(patchPayload).then(() => {
+          getAllWords(user.uid).then(showVocabWords);
+        });
+      });
+    }
+
     // el fin
   });
 };
