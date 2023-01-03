@@ -49,4 +49,6 @@ const updateLanguage = (payload) => new Promise((resolve, reject) => {
     .catch(reject);
 });
 
+// get a single Language API call?
+
 export { getLangTechs, createLanguage, updateLanguage };

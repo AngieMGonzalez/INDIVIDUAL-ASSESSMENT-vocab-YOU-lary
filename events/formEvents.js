@@ -45,19 +45,19 @@ const formEvents = (user) => {
     }
     // clicke event for submitting/creating a language/technolgy
     if (e.target.id.includes('submit-language')) {
-      console.warn('CLICKED SUBMIT language');
+      console.warn('CLICKED SUBMIT language', e.target.id);
 
       const payload = {
         langTech: document.querySelector('#language-technology').value,
         uid: user.uid
       };
 
-      console.warn(payload);
+      console.warn('payload', payload);
       createLanguage(payload).then(({ name }) => {
         const patchPayload = { firebaseKey: name };
 
         updateLanguage(patchPayload).then(() => {
-          getAllWords(user.uid).then(showVocabWords);
+          getAllWords(user).then(showVocabWords);
         });
       });
     }
